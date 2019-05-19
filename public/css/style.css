@@ -5,12 +5,14 @@ h1 {
 h1 {
     font-size: 200px;
 }
-
+h3 {
+    font-size: 100px;
+}
 #hello{
     color: green;
     font-style: italic
 }
 
 p{
-    font-size: 200px;
+    font-size: 100px;
 }

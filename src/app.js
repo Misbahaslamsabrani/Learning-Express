@@ -7,9 +7,25 @@ app.use(express.static(publicDirPath))
 
 app.set("view engine", "hbs")
 
-app.get("/", (req, res) => {
+/* app.get("/", (req, res) => {
     res.send("<h1> Welcome to world!! <h1>");
+}) */
+
+/* app.get("/", (req, res) => {
+    res.render("index");
+}) */ 
+
+app.get("/", (req, res) => {
+    res.render("index", {
+        title: "ExpressJS",
+        course: "MERN",
+        teacher: "Sir Aamir Pinger"
+    });
 })
+
+app.get("/about", (req, res) => {
+    res.render("about");
+}) 
 
 app.get("/name", (req, res) => {
     res.send({
