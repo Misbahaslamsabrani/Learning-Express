@@ -1,11 +1,18 @@
 const express = require("express");
 const app = express();
 const path = require('path');
-
+const hbs = require("hbs");
 const publicDirPath = path.join(__dirname,'../public')
 app.use(express.static(publicDirPath))
 
 app.set("view engine", "hbs")
+
+const viewFolderPath = path.join(__dirname,'../templates/views')
+app.set("views", viewFolderPath) 
+
+
+const partialsFolderPath = path.join(__dirname,'../templates/partials')
+hbs.registerPartials(partialsFolderPath)
 
 /* app.get("/", (req, res) => {
     res.send("<h1> Welcome to world!! <h1>");
