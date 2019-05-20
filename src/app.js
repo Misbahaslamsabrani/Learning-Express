@@ -33,10 +33,9 @@ hbs.registerPartials(partialsFolderPath)
     });
 }) */
 
-/* app.get("/", (req, res) => {
-    console.log(req.query);
+app.get("/", (req, res) => {
     res.render("index");
-}) */
+})
 
 /* app.get("/", (req, res) => {
     if(!req.query.teacher){
@@ -55,7 +54,7 @@ hbs.registerPartials(partialsFolderPath)
     }
 }) */
 
-app.get("/", (req, res) => {
+/* app.get("/", (req, res) => {
     if (!req.query.teacher) {
         return res.send({ error: "Teacher not found" })
     }
@@ -70,7 +69,7 @@ app.get("/", (req, res) => {
             title: "Axiom"
         })
     }
-}) 
+})  */
 
 app.get("/about", (req, res) => {
     res.render("about");
