@@ -70,7 +70,7 @@ app.get("/", (req, res) => {
             title: "Axiom"
         })
     }
-})
+}) 
 
 app.get("/about", (req, res) => {
     res.render("about");
@@ -112,7 +112,7 @@ app.get("/search", (req, res) => {
                     return res.send({error: "status code undefined!"})
                 }
                 else if (response.statusCode === 404) {
-                    return res.send({"404": "Not Found", error:`No entry available for '${word}'.`})
+                    return res.send({error:`404 Not Found,No entry available for '${word}'.`})
                 }
             }
             else {

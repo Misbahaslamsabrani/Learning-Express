@@ -8,11 +8,22 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-    {{>header}}
+    {{!-- {{>header}}
     <h1>{{course}}</h1>
     <h3>{{title}}</h3>
-    <p id="hello">{{teacher}}</p>
-    {{>footer}}
+    <p id="hello">{{teacher}}</p> --}}
+   
+    <div>
+    <input type="text" id="txt" placeholder="Enter Word. . ">
+    <button onclick="fetchMeaning()">Search</button>
+    </div>
+
+    <div id="error">
+        <h4>Word: <span id="word"></span></h4>
+        <h4>Definition: <span id ="def"></span></h4>
+    </div>
+
+    {{!-- {{>footer}} --}}
 </body>
 <script src="./js/app.js"></script>
 </html>
