@@ -4,8 +4,11 @@ function fetchMeaning(){
     const txtbox = document.getElementById("txt")
     const word = txtbox.value;
     txtbox.value="";
-    const url = "http://localhost:4040/search?word="+word;
 
+    /* const url = "http://localhost:4040/search?word="+word; */
+    
+    const url = "/search?word="+word;
+    
     fetch(url).then(response => {
         return response.json();
     }).then(data => {
